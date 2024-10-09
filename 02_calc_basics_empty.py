@@ -17,7 +17,6 @@ import csv
 import tkinter as tk
 from tkinter import messagebox
 
-
 os.system('cls')
 """
 ##############################################################
@@ -128,31 +127,30 @@ while True:
 soucet = input1 + input2
 rozdil = input1 - input2
 soucin = input1 * input2
-if input2 != 0:
-    podil = input1 / input2
-else:
+if input2 == 0:
     podil = "Nedefinovaná operace(dělění nulou)."
+else:
+    podil = input1 / input2
 
 
 
 vysledky = [
-    f"Sčítaní: {soucet}"
-    f"Odčítání: {rozdil}"
-    f"Násobení: {soucin}"
+    f"Sčítání: {soucet}",
+    f"Odčítání: {rozdil}",
+    f"Násobení: {soucin}",
     f"Dělení: {podil}"
 ]
-
-
-
-with open('calc_basics_vysledky.csv', mode='w', newline='') as file:
+file_path = 'C:/Users/josef/Documents/VS CODE/Seminar Programovani/calc_basics_vysledky.csv'
+with open('calc_basics_vysledky.csv', mode='w', newline='', encoding= 'utf-8') as file:
     writer = csv.writer(file)
     writer.writerow(["Operace", "Výsledek"])
     for vysledek in vysledky:
-        writer.writerow(vysledek)
+        operace, vysledek_value = vysledek.split(": ", 1)
+        writer.writerow([operace, vysledek_value])
 
 
 
-with open('calc_basics_vysledky.csv', mode='r', newline='') as file:
+with open('calc_basics_vysledky.csv', mode='r', newline='', encoding= 'utf-8') as file:
     reader = csv.DictReader(file)
     
  

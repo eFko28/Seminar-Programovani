@@ -26,6 +26,28 @@ os.system("cls")
 ### Základní verze - obvod a obsah trojúhelníku
 
 
+print("Hey! Lets calculate the circumference and the are of a triangle!")
+while True:
+    try:
+        a = float(input("What should be the length of the first side?"))
+        b = float(input("And what about the second?"))
+        c= float(input("The third and last one?"))
+        break
+    except ValueError:
+        print("Non-numerical input. Try again.")
+
+
+circumference = a + b + c
+s = (a + b + c) / 2
+area = math.sqrt(s * (s - a) * (s - b) * (s - c))
+
+print(f"The cicumference of your triangle is {circumference} and the area should be {area}")
+
+
+
+
+
+
 ##############################################################
 ### Verze s ověřením vstupu - obvod a obsah trojúhelníku
 ### + nově definice funkce
@@ -42,7 +64,6 @@ os.system("cls")
 # !!! provést instalaci matplotlib příkazem v terminálu: pip install matplotlib
 
 
-import matplotlib.pyplot as plt
 
 
 ##############################################################

@@ -95,5 +95,6 @@ elif 13:30 <= minutes < 21:00:
 else:
     output_time = "Padej spát! Ať máš zítra sílu na programování!"
 
+
 print(output_time)
 print("----------")
