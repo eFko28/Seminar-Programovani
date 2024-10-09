@@ -18,7 +18,10 @@ import tkinter as tk
 from tkinter import messagebox
 
 os.system('cls')
-"""
+
+
+
+
 ##############################################################
 ### Jednoduchá verze bez kontroly
 print("Jednoduchá verze bez kontroly")
@@ -108,7 +111,7 @@ print("----------")
 ##############################################################
 ### ** verze - uložení do csv
 
-"""
+
 print("Verze - uložení do csv")
 print("----------")
 
@@ -131,8 +134,7 @@ if input2 == 0:
     podil = "Nedefinovaná operace(dělění nulou)."
 else:
     podil = input1 / input2
-
-
+    
 
 vysledky = [
     f"Sčítání: {soucet}",
@@ -140,6 +142,7 @@ vysledky = [
     f"Násobení: {soucin}",
     f"Dělení: {podil}"
 ]
+
 file_path = 'C:/Users/josef/Documents/VS CODE/Seminar Programovani/calc_basics_vysledky.csv'
 with open('calc_basics_vysledky.csv', mode='w', newline='', encoding= 'utf-8') as file:
     writer = csv.writer(file)
