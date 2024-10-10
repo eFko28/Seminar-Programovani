@@ -144,7 +144,7 @@ vysledky = [
 ]
 
 file_path = 'C:/Users/josef/Documents/VS CODE/Seminar Programovani/calc_basics_vysledky.csv'
-with open('calc_basics_vysledky.csv', mode='w', newline='', encoding= 'utf-8') as file:
+with open(file_path, mode='w', newline='', encoding= 'utf-8') as file:
     writer = csv.writer(file)
     writer.writerow(["Operace", "Výsledek"])
     for vysledek in vysledky:

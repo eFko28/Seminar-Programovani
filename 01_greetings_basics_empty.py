@@ -29,7 +29,7 @@ prijmeni = input("Příjmení uživatele: ")
 
 #prvni verze
 print("Základní verze bez obměny pozdravu:")
-vystup = ("Ahoj " + jmeno.title(jmeno) + " " + prijmeni.title(jmeno) + "! Jak se dnes máš?")
+vystup = ("Ahoj " + jmeno.title() + " " + prijmeni.title() + "! Jak se dnes máš?")
 print(vystup)
 print("----------")
 
@@ -82,15 +82,15 @@ print("Verze - pozdrav podle denní doby")
 #ziskani casu, vytvoreni promenne s presnosti na minuty
 current_daytime = datetime.datetime.now()
 minutes = current_daytime.minute
-
+print(minutes)
 #podminky pro output 
-if 0:00 <= minutes < 6:00:
+if 0 <= minutes < 360:
     output_time = "Tak brzo? Makej ještě spát!"
-elif 6:00 <= minutes < 11:30:
+elif 360 <= minutes < 690:
     output_time = "Dobré ráno! Co budeš dneska programovat?"
-elif 11:30 <= minutes < 13:30:
-    output_time = "Už jsi byl na oběd? Nezapomínej, že musís krom programování i jíst!"
-elif 13:30 <= minutes < 21:00:
+elif 690 <= minutes < 810:
+    output_time = "Už jsi byl na oběd? Nezapomínej, že musíš krom programování i jíst!"
+elif 810 <= minutes < 1260:
     output_time = "Myslím, že by jsi měl ještě něco naprogramovat..."
 else:
     output_time = "Padej spát! Ať máš zítra sílu na programování!"
