@@ -81,8 +81,9 @@ print("Verze - pozdrav podle denní doby")
 
 #ziskani casu, vytvoreni promenne s presnosti na minuty
 current_daytime = datetime.datetime.now()
-minutes = current_daytime.minute
-print(minutes)
+minutes = current_daytime.hour * 60 + current_daytime.minute
+
+
 #podminky pro output 
 if 0 <= minutes < 360:
     output_time = "Tak brzo? Makej ještě spát!"
